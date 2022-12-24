@@ -1,7 +1,5 @@
 import '../App.css'
 import React from 'react';
-import { useParams } from "react-router-dom";
-import useFetch from '../useFetch';
 import AppetizerPic from '../imgs/appetizer.png';
 import EntreePic from '../imgs/entree.png';
 import DessertPic from '../imgs/dessert.png';
@@ -10,7 +8,7 @@ import favoriteIcon from '../imgs/favorite.webp';
 import RatingStars from '../components/rating';
 
 const BlogBox = (props) => {
-
+  
   let mealType = "Appetizer";
   let favImage = null;
   let icon = AppetizerPic;
@@ -27,7 +25,6 @@ const BlogBox = (props) => {
   else if(props.type == "Snack"){
     icon = SnackPic;
   }
-
 
   if (props.favorite) {
     favImage = favoriteIcon;
@@ -52,16 +49,15 @@ const BlogBox = (props) => {
       </div>
       <p className=" font-body text-2xl font-bold truncate ...">{props.name} </p>
       <p>Type: {props.type}</p>
-      
-      <p>Rating: {props.rating}</p>
       <RatingStars rating= {props.rating}/>
-      <p>ID: {props.id}</p>
+
+      {/* <p>Rating: {props.rating}</p> */}
+      {/* <p>ID: {props.id}</p> */}
       {/* <p>EaseOfPrep: {props.easeOfPrep}</p> */}
       {/* <p>Notes: {props.notes}</p> */}
-      
       {/* <p>PrepTime: {props.prepTime}</p> */}
       {/* <p>Ingredients: {props.ingredients}</p> */}
-      <p>Favorite: {String(props.favorite)}</p>
+      {/* <p>Favorite: {String(props.favorite)}</p> */}
       
       
     </div>

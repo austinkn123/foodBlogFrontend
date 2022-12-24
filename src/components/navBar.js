@@ -4,6 +4,7 @@ import useFetch from '../useFetch';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
+  // Data from fetch is set as myRecipes
   const { data: myRecipes } = useFetch('http://localhost:9000/recipes');
   
   return (
@@ -19,6 +20,7 @@ const NavBar = () => {
       <div >
         <button className="peer  text-gray-200 hover:text-yellow-200 ">Favorites</button>
         <div className='hidden peer-hover:flex hover:flex w-[200px] flex-col bg-gray-200 drop-shadow-md'>
+          {/* Maps through the list of recipe objects and checks which one is the favorite */}
           {myRecipes.map( (recipe) => {
             if(recipe.favorite){
               return (

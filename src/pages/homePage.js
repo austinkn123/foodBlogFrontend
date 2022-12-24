@@ -16,9 +16,8 @@ const HomePage = () => {
         </div>
         
       </div>
-      {/* <div className="flex justify-center "> */}
-        <RecipeList/>
-      {/* </div> */}
+      
+      <RecipeList/>
       
 
     </div>
