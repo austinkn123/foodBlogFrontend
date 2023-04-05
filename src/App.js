@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import NavBar from './components/NavBar';
+import NavBar from './components/navBar';
 import HomePage from './pages/homePage';
 import AddRecipe from './pages/addRecipe';
 import RecipeDetails from './pages/recipeDetails';

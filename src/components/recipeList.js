@@ -3,7 +3,6 @@ import BlogBox from './blogBox';
 import { Link } from 'react-router-dom';
 import useFetch from '../useFetch';
 
-
 function RecipeList () {
   //myRecipes is the array fetched from the api
   const { data: myRecipes } = useFetch('http://localhost:9000/recipes');
